@@ -35,9 +35,9 @@ if single_char == five_char_word[3]:
 if single_char == five_char_word[4]:
     count += 1
 if count == 1:
-    print(str(count) + " intance of " + single_char + " found in " + five_char_word)
+    print(str(count) + " instance of " + single_char + " found in " + five_char_word)
 else:
     if count > 1:
-        print(str(count) + " intances of " + single_char + " found in " + five_char_word)
+        print(str(count) + " instances of " + single_char + " found in " + five_char_word)
     if count == 0:
-        print("No intances of " + single_char + " found in " + five_char_word)
+        print("No instances of " + single_char + " found in " + five_char_word)
