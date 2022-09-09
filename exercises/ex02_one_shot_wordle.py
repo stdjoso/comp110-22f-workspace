@@ -41,4 +41,4 @@ while i < len(guess):   # ensures while loop is not infinite; reasoning: len-1 =
                     emoji_result += WHITE_BOX
                 i += 1   # ensures while-loop expression becomes false and breaks
         print(emoji_result)
-        print("Not quite. Play again soon!")
+        print("Not quite. Play again soon!")     
