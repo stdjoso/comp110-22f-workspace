@@ -28,7 +28,6 @@ def tama_quit() -> None:
 from random import randint
 
 
-
 def tama_feed() -> None:
     """Action for option 'food'."""
     global points
@@ -102,23 +101,18 @@ def tamagotchi() -> None:
     while option_chosen is False:
         if option == "Q":
             option_chosen = True
-            print("option 1 has been called")
             tama_quit()
         elif option == "F":
             option_chosen = True
-            print("option 2 has been called")
             tama_feed()
         elif option == "P":
             option_chosen = True
-            print("option 3 has been called")
             tama_play()
         elif option == "C": 
             option_chosen = True
-            print("option 4 has been called")
             tama_clean()
         elif option == "W":
             option_chosen = True
-            print("option 5 has been called")
             tama_wait()
         else:
             option = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ")
