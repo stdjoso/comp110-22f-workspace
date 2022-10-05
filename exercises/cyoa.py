@@ -118,7 +118,7 @@ def tamagotchi() -> None:
             option_chosen = True
             tama_wait()
         else:
-            option = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ")
+            option = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ").upper()
 
 
 # custom function - boost
@@ -154,7 +154,7 @@ def main() -> None:
                     save_option_chosen = True
                     tama_boost(points["health"], save_choice)
                 else:
-                    save_choice = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ")
+                    save_choice = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ").upper()
         health()
     print(f"\n\n\t\t\t\t\tI'm so so sorry {player}, {pet_name} has died ˚‧º·(˃̣̣̥⌓˂̣̣̥)‧º·˚")
     print(f"\n\n\t\t\t\t\t\t---- {RIP} HERE LIES {pet_name}: {BIRTHDAY_CAKE} {points['age']} {RIP} ---- ")
