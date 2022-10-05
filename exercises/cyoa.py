@@ -142,7 +142,7 @@ def main() -> None:
     health()
     # game loop here 
     global points
-    while points["exhausted"] < 200 and points["health"] > 0 and points["food"] > 0:
+    while points["exhausted"] < 200 and points["health"] > 0 and points["food"] > 0 and points["age"] <= 100:
         # allow user to continue on same path, choose new path (action), or stop playing
         tamagotchi()
         points["age"] += 1
