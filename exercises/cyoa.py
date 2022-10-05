@@ -1,5 +1,8 @@
 """EX06 - Choose your own adventure: an...atempt at Tamagotchi."""
 
+
+from random import randint
+
 __author__: str = "730390832"
 
 
@@ -21,11 +24,10 @@ EMERGENCY: str = "\U0001F6A8"
 
 # menu options
 def tama_quit() -> None:
+    """Action for option 'quit'."""
     health()
     print(f"\nさようなら (farewell) {player}-さん, {pet_name} will miss you!! (◕︿◕✿)")
     quit()
-
-from random import randint
 
 
 def tama_feed() -> None:
@@ -59,6 +61,7 @@ def tama_clean() -> None:
 
 
 def tama_wait() -> None:
+    """Action for option 'wait"."""
     global points
     points["bored"] += randint(5, 20)
     points["food"] -= randint(-10, 20)
@@ -69,15 +72,16 @@ def tama_wait() -> None:
 
 # greet fuction
 def greet() -> None:
-   global player
-   player = input("What is your name? ")
-   print(f"\n{player}-さん, よろしくお願いします！(nice to meet you!)\n\nToday you will play a pet simulator inspired by たまごっち (tamagotchi, \"Egg Watch\"), a handheld digital pet created in Japan.\nYou will get to name your pet, feed them, wash them, and play with them.\nYou will also get to watch them age!\nBut take exemplary care of your new friend, or they will meet an untimely end (ノ_<、)\nYour new friend is waiting for you - じゃあ、初めって！(lets begin!)\n\n\t\t┏(-_-)┛┗(-_- )┓\n\n")
+    """Player welcome message."""
+    global player
+    player = input("What is your name? ")
+    print(f"\n{player}-さん, よろしくお願いします！(nice to meet you!)\n\nToday you will play a pet simulator inspired by たまごっち (tamagotchi, \"Egg Watch\"), a handheld digital pet created in Japan.\nYou will get to name your pet, feed them, wash them, and play with them.\nYou will also get to watch them age!\nBut take exemplary care of your new friend, or they will meet an untimely end (ノ_<、)\nYour new friend is waiting for you - じゃあ、初めって！(lets begin!)\n\n\t\t┏(-_-)┛┗(-_- )┓\n\n")
 
 
 # paths 
 def menu() -> None:
     """Prints player option menu."""
-    print(f"\nWhen prompted, enter the letter that corresponds with your desired action.")
+    print("\nWhen prompted, enter the letter that corresponds with your desired action.")
     option_menu: dict[str, str] = {"Quit game": "Q", "Feed": "F", "Play": "P", "Clean": "C", "Wait": "W"}
     for option in option_menu:
         print(f"{option_menu[option]}: \t{option}")
@@ -116,7 +120,8 @@ def tamagotchi() -> None:
             tama_wait()
         else:
             option = input("That wasn't an available option! Please try again (づ ◕‿◕ )づ: ")
-    
+
+
 # custom function - boost
 def tama_boost(health_points: int, save_choice: str) -> int:
     """If low health, player can choose to accept a boost in health."""
@@ -125,7 +130,7 @@ def tama_boost(health_points: int, save_choice: str) -> int:
         print(f"\nDon't worry {player}, {pet_name}'s health was boosted by 50.")
     if save_choice == "N":
         health_points += 0
-        print(f"\nYou left it up to fate!")
+        print("\nYou left it up to fate!")
     return health_points
 
 
@@ -156,5 +161,5 @@ def main() -> None:
     print(f"\n\n\t\t\t\t\t\t---- {RIP} HERE LIES {pet_name}: {BIRTHDAY_CAKE} {points['age']} {RIP} ---- ")
 
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     main()
