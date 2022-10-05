@@ -13,7 +13,6 @@ points: dict[str, int] = {"age": 1, "bored": randint(0, 100), "food": randint(0,
 BIRTHDAY_CAKE: str = "\U0001F382"
 FOOD: str = "\U0001F35B"
 HEALTH: str = "\U0001F49A"
-QUIT: str = "\U0001F6D1"
 PLAY: str = "\U0001F4A8"
 WAIT: str = "\U000023F3"
 PET: str = "\U0001F431"
