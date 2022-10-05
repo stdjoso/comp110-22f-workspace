@@ -2,7 +2,6 @@
 
 __author__: str = "730390832"
 
-from random import randint
 
 player: str = ""
 pet_name: str = ""
@@ -25,6 +24,9 @@ def tama_quit() -> None:
     health()
     print(f"\nさようなら (farewell) {player}-さん, {pet_name} will miss you!! (◕︿◕✿)")
     quit()
+
+from random import randint
+
 
 
 def tama_feed() -> None:
