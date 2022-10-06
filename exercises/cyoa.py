@@ -159,6 +159,6 @@ def main() -> None:
     print(f"\n\n\t\t\t\t\tI'm so so sorry {player}, {pet_name} has died ˚‧º·(˃̣̣̥⌓˂̣̣̥)‧º·˚")
     print(f"\n\n\t\t\t\t\t\t---- {RIP} HERE LIES {pet_name}: {BIRTHDAY_CAKE} {points['age']} {RIP} ---- ")
 
-
+       
 if __name__ == "__main__":
     main()
