@@ -158,6 +158,7 @@ def main() -> None:
         health()
     print(f"\n\n\t\t\t\t\tI'm so so sorry {player}, {pet_name} has died ˚‧º·(˃̣̣̥⌓˂̣̣̥)‧º·˚")
     print(f"\n\n\t\t\t\t\t\t---- {RIP} HERE LIES {pet_name}: {BIRTHDAY_CAKE} {points['age']} {RIP} ---- ")
+    # program loop after it dies, nest in in while lop so player can choose to play again!!!!
 
        
 if __name__ == "__main__":
